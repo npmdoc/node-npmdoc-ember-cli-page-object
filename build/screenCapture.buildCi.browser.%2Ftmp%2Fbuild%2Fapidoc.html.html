@@ -1,0 +1,319 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://ember-cli-page-object.js.org">ember-cli-page-object (v1.9.0)</a>
+</h1>
+<h4>This ember-cli addon eases the construction of page objects on your acceptance and integration tests</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-page-object">module ember-cli-page-object</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object._shouldIncludeFiles">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.</span>_shouldIncludeFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object.included">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object.treeFor">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.</span>treeFor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-page-object.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-page-object.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-cli-page-object.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-page-object.index">module ember-cli-page-object.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object.index._shouldIncludeFiles">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>_shouldIncludeFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object.index.included">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-page-object.index.treeFor">
+            function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>treeFor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-page-object" id="apidoc.module.ember-cli-page-object">module ember-cli-page-object</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object._shouldIncludeFiles" id="apidoc.element.ember-cli-page-object._shouldIncludeFiles">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.</span>_shouldIncludeFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_shouldIncludeFiles = function () {
+  return !!this.app.tests;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports = {
+name: 'ember-cli-page-object',
+
+options: {
+  nodeAssets: {
+    ceibo: function() {
+      return {
+        enabled: this.<span class="apidocCodeKeywordSpan">_shouldIncludeFiles</span>(),
+        import: ['index.js']
+      };
+    }
+  }
+},
+
+included: function(app) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object.included" id="apidoc.element.ember-cli-page-object.included">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included = function (app) {
+  // see: https://github.com/ember-cli/ember-cli/issues/3718
+  if (typeof app.import !== 'function' &amp;&amp; app.app) {
+    app = app.app;
+  }
+
+  this.app = app;
+
+  this._super.included.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object.treeFor" id="apidoc.element.ember-cli-page-object.treeFor">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.</span>treeFor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeFor = function () {
+  if (!this._shouldIncludeFiles()) {
+    return;
+  }
+
+  return this._super.treeFor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-page-object.index" id="apidoc.module.ember-cli-page-object.index">module ember-cli-page-object.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object.index._shouldIncludeFiles" id="apidoc.element.ember-cli-page-object.index._shouldIncludeFiles">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>_shouldIncludeFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_shouldIncludeFiles = function () {
+  return !!this.app.tests;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports = {
+name: 'ember-cli-page-object',
+
+options: {
+  nodeAssets: {
+    ceibo: function() {
+      return {
+        enabled: this.<span class="apidocCodeKeywordSpan">_shouldIncludeFiles</span>(),
+        import: ['index.js']
+      };
+    }
+  }
+},
+
+included: function(app) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object.index.included" id="apidoc.element.ember-cli-page-object.index.included">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included = function (app) {
+  // see: https://github.com/ember-cli/ember-cli/issues/3718
+  if (typeof app.import !== 'function' &amp;&amp; app.app) {
+    app = app.app;
+  }
+
+  this.app = app;
+
+  this._super.included.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-page-object.index.treeFor" id="apidoc.element.ember-cli-page-object.index.treeFor">
+        function <span class="apidocSignatureSpan">ember-cli-page-object.index.</span>treeFor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeFor = function () {
+  if (!this._shouldIncludeFiles()) {
+    return;
+  }
+
+  return this._super.treeFor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
